@@ -22,12 +22,16 @@ from chain import Chain
 
 chain = Chain(difficulty=20)
 
-i = 0
+# i = 0
 
-while(True):
-    data = input("Add something to the chain: ")
-    chain.add_to_pool(data)
+# while(True):
+#     data = input("Add something to the chain: ")
+#     chain.add_to_pool(data)
+#     chain.mine()
+#     if i % 5 == 0:
+#         print(chain.blocks[i])
+#     i += 1
+
+for i in range(5):
+    chain.add_to_pool(f" Block #{i} ")
     chain.mine()
-    if i % 5 == 0:
-        print(chain.blocks[i])
-    i += 1
